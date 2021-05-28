@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>Get user data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>User details form</h1>
+        <br> <br>
+        <form method="POST">
+            {{ formdata.as_p }}
+            {% csrf_token %}
+            <input type="submit" name="Submit" id="btn_submit" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+
+</html>
